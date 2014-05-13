@@ -1,0 +1,56 @@
+//
+   Created by chenpeng on 14-2-19.
+- var arr = [];
+- arr[page] = 'current';
+- if (page > 10) arr[parseInt(page/10)] = 'current';
+#sidebar
+    #sidebar-warpper
+        h1#sidebar-title
+            a(href="") Simpla Admin
+        a(href="#")
+            img(id="logo", src="resources/images/logo.png", alt="Simpla Admin logo")
+        #profile-links Hello,
+            a(href="",title="Edit your profile") #{user.name}
+            span  |
+            a(href="#",onclick="logout()")  注销
+        ul#main-nav
+            li
+                a(href="page0",class="nav-top-item no-submenu #{arr[0]}") 客户服务
+            li
+                a(href="page4",class="nav-top-item no-submenu #{arr[4]}") 电话记录
+            li
+                a(href="#",class="nav-top-item #{arr[1]}") 找医生配置
+                ul
+                    li
+                        a(href="page11",class="#{arr[11]}") 医院
+                    li
+                        a(href="page12",class="#{arr[12]}") 科室
+                    li
+                        a(href="page13",class="#{arr[13]}") 疾病
+                    li
+                        a(href="page14",class="#{arr[14]}") 医生职称
+                    li
+                        a(href="page15",class="#{arr[15]}") 价格
+            li
+                a(href="#", class="nav-top-item #{arr[2]}") 号源管理
+                ul
+                    li
+                        a(href="page21",class="#{arr[21]}") 号源管理
+                    li
+                        a(href="page22",class="#{arr[22]}") 医院管理
+                    li
+                        a(href="page23",class="#{arr[23]}") 科室管理
+                    li
+                        a(href="page24",class="#{arr[24]}") 号源类型管理
+            li
+                a(href="#", class="nav-top-item #{arr[3]}") 用户管理
+                ul
+                    li
+                        a(href="page31",class="#{arr[31]}") 医生管理
+
+                    //li
+                    //    a(href="page32",class="#{arr[32]}") 劳务管理
+                    //li
+                    //    a(href="page33",class="#{arr[33]}") 客服管理
+                    //li
+                    //    a(href="page34",class="#{arr[34]}") 客户管理

@@ -1,0 +1,37 @@
+//
+                       Created by chenpeng on 14-2-27.
+doctype html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+html(xmlns='http://www.w3.org/1999/xhtml')
+    head
+        include include/head
+        block scripts
+    body
+        #main-content
+               block content
+                            #tab1.tab-content.default-tab
+                                table
+                                    thead
+                                        block thead
+                                    tfoot
+                                        block tfoot-th
+                                        block tfoot
+                                        tr
+                                            td(colspan="10")
+                                                .bulk-actions.align-left
+                                                    block deleteAll
+                                                        a(class="button",href="#",onclick="del_all()") Apply to delete
+                                                .pagination
+                                                    block pageManage
+                                                        a(id="btnFirstPage",href="#",title="First Page") &laquo; First
+                                                        a(id="btnPrevPage",href="#",title="Previous Page") &laquo; Previous
+                                                        a(id="currentPage",class="number") 3
+                                                        span /
+                                                        a(id="allPage",class="number current") 3
+                                                        a(id="btnNextPage",href="#",title="Next Page") Next &raquo;
+                                                        a(id="btnLastPage",href="#",title="Last Page") Last &raquo;
+                                            .clear
+                                    block tbody
+                                        tbody(id="typeList")
+                            block tab2
+                .clear
+                include include/footer

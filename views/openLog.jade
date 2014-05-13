@@ -1,0 +1,21 @@
+//
+   Created by chenpeng on 14-5-12.
+
+extends default
+block scripts
+    script(src="javascripts/openLogManage.js")
+    - for ( var i = 0;i < list.length;i++)
+        - if( list[i])
+            script logData.push({userId:'#{list[i].user_id}',doorId:'#{list[i].door_id}',time:'#{list[i].ctime}', password:#{list[i].url}, desc:'#{list[i].desc}'});
+block title
+    h3 开门记录
+block thead
+    tr
+        th userId
+        th doorId
+        th Time
+        th password
+        th desc
+block tbody
+    tbody(id="logList")
+block deleteAll
